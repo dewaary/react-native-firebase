@@ -1,21 +1,23 @@
 // Import the functions you need from the SDKs you need
-import {initializeApp} from 'firebase/app';
-import firebase from 'firebase';
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/database';
+
+// import 'firebase/compat/[SERVICE_NAME]';
 
 // Your web app's Firebase configuration
-
-firebase.initializeApp({
-  apiKey: 'AIzaSyAiiyh82Z8SACmVnNpDr5F08Jj5xNZa-E4',
-  authDomain: 'crud-react-native-4e48f.firebaseapp.com',
-  projectId: 'crud-react-native-4e48f',
-  storageBucket: 'crud-react-native-4e48f.appspot.com',
-  messagingSenderId: '411599535872',
-  appId: '1:411599535872:web:17b3212c5ff7841613bde5',
-});
+const firebaseConfig = {
+  apiKey: 'AIzaSyBRAAFodJTFYhhHhC4cLL0gFtKGz0T77EQ',
+  authDomain: 'crud-react-mobile.firebaseapp.com',
+  projectId: 'crud-react-mobile',
+  storageBucket: 'crud-react-mobile.appspot.com',
+  messagingSenderId: '449492254402',
+  appId: '1:449492254402:web:bf9ea8f95345fe64da455b',
+};
 
 // Initialize Firebase
-const FIREBASE = firebase;
+const FIREBASE = firebase.initializeApp(firebaseConfig);
 
 export default FIREBASE;
+
+// export const db = getFirestore(FIREBASE);
